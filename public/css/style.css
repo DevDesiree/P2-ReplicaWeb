@@ -2,19 +2,22 @@
   margin: 0;
 }
 * body {
-  width: 100%;
+  overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
   background-color: #F7FAFD;
+  width: 100%;
 }
 * body p, * body li {
   color: #818282;
   font-size: 18px;
 }
+
 /* Header */
 header {
   background-color: #F7FAFD;
   position: fixed;
   width: 100%;
+  z-index: 999;
 }
 header nav {
   display: flex;
@@ -31,7 +34,7 @@ header nav ul {
   padding-right: 50px;
   align-items: center;
 }
-header nav ul #container_extra #extra_menu_options {
+header nav ul #extra_menu_options {
   background-color: #F7FAFD;
   position: absolute;
   display: none;
@@ -40,18 +43,22 @@ header nav ul #container_extra #extra_menu_options {
   margin-top: 10px;
   padding: 15px 15px 0 15px;
 }
-header nav ul #container_extra #extra_menu_options .option {
+header nav ul #extra_menu_options .option {
   text-align: center;
   padding-bottom: 10px;
+  padding-top: 10px;
   width: 155px;
 }
-header nav ul #container_extra #extra_menu_options .option a {
+header nav ul #extra_menu_options .option:nth-child(1), header nav ul #extra_menu_options .option:nth-child(2) {
+  border-bottom: 1px solid #E3EAED;
+}
+header nav ul #extra_menu_options .option a {
   text-decoration: none;
   color: #333333;
   font-size: 15px;
   font-weight: 700;
 }
-header nav ul #container_extra #extra_menu_options .option a:hover {
+header nav ul #extra_menu_options .option a:hover {
   color: #FF556E;
 }
 header nav ul li {
@@ -152,14 +159,26 @@ header nav ul .li_down_arrow {
   font-size: 15px;
   color: #FFFFFF;
 }
-#banner .banner_circle_white_right {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
 #banner .banner_circle_white_right img {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  right: -220px;
+  top: 200px;
+}
+#banner .banner_circle_white_left img {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: -300px;
+  top: 250px;
+}
+#banner .banner_circle_blue img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 120px;
+  top: 340px;
 }
 #banner .banner_container_phone {
   display: flex;
@@ -454,6 +473,30 @@ header nav ul .li_down_arrow {
   font-size: 13px;
 }
 
+#screens_phone_download .screens_green_diamond img {
+  width: 20px;
+  transform: translateY(99px);
+  position: absolute;
+  right: 180px;
+}
+#screens_phone_download .screens_yellow_circle img {
+  width: 40px;
+  transform: translateY(440px);
+  left: 150px;
+  position: absolute;
+}
+#screens_phone_download .screens_white_circle_right img {
+  width: 400px;
+  position: absolute;
+  right: -220px;
+  transform: translateY(110px);
+}
+#screens_phone_download .screens_white_circle_left img {
+  width: 400px;
+  position: absolute;
+  left: -230px;
+  transform: translateY(254px);
+}
 #screens_phone_download #screens_container_phone_image {
   display: flex;
   justify-content: center;

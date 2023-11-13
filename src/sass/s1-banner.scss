@@ -61,14 +61,12 @@
             &:hover{
                 background-color: #FFFBFC;
                 color: #FF556E;
-               
 
                 i {
                     color: #FF556E;
                 }
             }
 
-            
 
             i {
                 font-size: 15px;
@@ -78,17 +76,51 @@
         }
     }
 
-    .banner_circle_white_right {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-
-
+    .banner_circle_white_right{
+        
+        
         img {
-            width: 200px;
-            height: 200px;
+            
+            
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            right: -220px; 
+            top: 200px;
+            
             
         }
+
+    }
+
+    .banner_circle_white_left{
+        
+        
+        img {
+            
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: -300px; 
+            top: 250px;
+            
+        }
+        
+    }
+
+    .banner_circle_blue{
+        
+
+        img {
+            
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 120px; 
+            top: 340px;
+            
+        }
+
 
     }
 

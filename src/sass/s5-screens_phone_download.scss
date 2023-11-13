@@ -1,5 +1,53 @@
 #screens_phone_download {
 
+    .screens_green_diamond {
+
+        img {
+            width: 20px;
+            transform: translateY(99px);
+            position: absolute;
+            right: 180px
+        }
+
+    }
+
+    .screens_yellow_circle {
+
+
+        img {
+            width: 40px;
+            transform: translateY(440px);
+            left: 150px;
+            position: absolute;
+
+
+        }
+    }
+
+
+    .screens_white_circle_right {
+        img {
+            width: 400px;
+            position: absolute;
+            right: -220px;
+            transform: translateY(110px);
+
+
+
+        }
+    }
+
+    .screens_white_circle_left {
+
+        img {
+            width: 400px;
+            position: absolute;
+            left: -230px;
+            transform: translateY(254px);
+
+        }
+
+    }
 
 
     #screens_container_phone_image {
@@ -26,15 +74,15 @@
                 align-items: center;
                 border: 2px solid #FF556E;
 
-                &:hover{
+                &:hover {
                     background-color: #FFFBFC;
                     color: #FF556E;
-    
+
                     i {
                         color: #FF556E;
                     }
                 }
-    
+
 
             }
         }
