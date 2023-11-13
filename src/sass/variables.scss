@@ -1,0 +1,33 @@
+// Color for paragraphs
+$color_text_descriptions: #818282;
+$color_text_buttons: #FFFFFF;
+$color_background_buttons: #FF556E;
+
+
+
+
+
+// Mixin of Mobile Images Style --> Section 1 and Section 5
+@mixin mobile_style($size) {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+  
+    img {
+      width: $size;
+    }
+  }
+
+
+// Mixin of Buttons Style
+@mixin buttons_style($font-size: 13px, $background-color: None) {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: $font-size;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: $background-color;
+  }
+
+  

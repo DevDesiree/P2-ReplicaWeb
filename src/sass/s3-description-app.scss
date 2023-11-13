@@ -1,0 +1,114 @@
+#description_2 {
+    padding-top: 100px;
+    background-color: #E8EFF6;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding-bottom: 100px;
+
+
+
+    #container_button_and_description_2 {
+
+
+        #container_button_description_2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 250px;
+            padding-bottom: 30px;
+
+
+            button:first-child {
+                background-color: #9A67E7;
+                color: $color_text_buttons;
+
+                
+            }
+
+            button {
+                display: flex;
+                color: #7E7E7E;
+                padding: 5px 15px 5px 15px;             
+                align-items: center;
+                gap: 7px;
+                font-size: 14px;
+                background-color: #FFFBFC;   
+                border: none;
+                cursor: pointer;
+
+               
+            }
+        }
+    }
+
+
+
+    #container_description_app_2 {
+        width: 500px;
+
+        color: #7E7E7E;
+
+        p {
+            padding-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 0px;
+            list-style: none;
+
+
+            li {
+                padding-bottom: 10px;
+
+
+
+                i {
+                    margin-right: 5px;
+                    color: #24CC99;
+                }
+            }
+        }
+
+        #description_app_2_buttons{
+
+            margin-top: 12px;
+
+            button {
+                @include buttons_style(13px, #FF556E);
+                color: $color_text_buttons;
+                padding: 8px 27px 8px 27px;
+                border: 2px solid #FF556E;
+
+                &:hover{
+                    background-color: #FFFBFC;
+                    color: #FF556E;
+                }
+            }
+    
+            button:nth-child(2){
+                background-color: #E8EFF6;
+                border: 2px solid black;
+                color: black;
+
+                &:hover{
+                    background-color: black;
+                    color: #E8EFF6;
+                }
+            }
+        }
+
+
+
+
+    }
+
+    #description_2_container_img {
+
+        img {
+            width: 500px;
+        }
+    }
+
+
+}

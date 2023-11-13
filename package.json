@@ -1,0 +1,24 @@
+{
+  "name": "p2-replicaweb",
+  "version": "1.0.0",
+  "description": "Proyecto 2 Individual del Bootcamp FemCoders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-watch": "npx sass --watch src/sass/style.scss:public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevDesiree/P2-ReplicaWeb.git"
+  },
+  "keywords": [],
+  "author": "Desiree",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevDesiree/P2-ReplicaWeb/issues"
+  },
+  "homepage": "https://github.com/DevDesiree/P2-ReplicaWeb#readme",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

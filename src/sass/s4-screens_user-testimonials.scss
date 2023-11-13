@@ -1,0 +1,130 @@
+#screens {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 100px;
+
+
+
+    #container_screens {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding-top: 50px;
+        margin: 0 auto;
+        gap: 20px;
+
+
+        .comment_box {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            hr {
+                margin: 20px auto;
+                width: 15%;
+                border-color: #7e7e7e2c;
+
+            }
+
+            .comment_user {
+                height: 150px;
+                max-width: 600px;
+
+                p {
+                    max-width: 290px;
+                    font-style: italic;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+
+                span {
+                    font-weight: 700;
+                    color: black;
+                }
+
+            }
+
+
+
+            span {
+                color: #FFB30F;
+            }
+
+        }
+
+        .container_customer_logos {
+            margin: 50px 0 50px 0;
+            grid-column: span 4;
+            padding: 25px 30px 25px 30px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            background-color: white;
+            height: 100px;
+
+            div:last-child {
+                grid-column: span 4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+        }
+    }
+}
+
+#screens_stadistic_users {
+    padding: 40px 0 40px 0;
+    background-color: #E8EFF6;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+    #screen_stadistic_users {
+        display: flex;
+        flex-wrap: wrap;
+       
+
+        .counter_stadistic {
+
+            display: flex;
+            flex-direction: column;
+            margin: 50px;
+
+            &:nth-of-type(1) i {
+                color: #aa7eec;
+            }
+
+            &:nth-of-type(2) i {
+                color: #19CA94;
+            }
+
+            &:nth-of-type(3) i {
+                color: #FF556E;
+            }
+
+            &:nth-of-type(4) i {
+                color: #FFB30F;
+            }
+
+            &:nth-of-type(5) i {
+                color: #4FB9E8;
+            }
+
+            span{
+                margin-top: 20px;
+                font-size: 40px;
+                font-weight: 700;
+            }
+
+            p{
+                font-size: 13px
+            }
+        }
+
+    }
+}

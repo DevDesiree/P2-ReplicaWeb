@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+	<title>rating</title>
+	<defs>
+		<image  width="256" height="46" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAAuAQMAAAD9bVXXAAAAAXNSR0IB2cksfwAAAAZQTFRF/////7MPtA0HeQAAAAJ0Uk5TAP9bkSK1AAABZ0lEQVR4nK2UPW7EIBCFx3JB6RvEF4nia6WIYqJcjKPQpaWkQEw876HdtQNRiqwsnr6nJxh+dkTEBbHfM8b5BBGyUN4xuhMkBig6hBUy9QKZgcyAH4Bs40BhADJrGIDs40BlAOI0DkB0HNCHwKLYoOoPmDreDfw9sGom+CtsajSrWuUHlBusgGNUTZONSsgC8AthN6kOXuwA0xVpTRi1wc5ZT14H/ivQaoj03KkGSOntYuMuIHmGFwClwQo4HZQH5AbtoCCRpRBSA0eABJRSCbHBTIB4lFIIocFEgPDOEsFjpSxCEEwHL9ITrJQEK+Hh2a07TGdQ+R4iHke9BrbbgxkEBjNUBmIX/iGgvwVULudwD6R+oHdQ9BZ6HfhDoNL7glf3B1CDSfMG7xNeXgEfgLIetzlpXMw7/mPmRYeA7AbJ4br9rGiJm3kBUNA8NaB5VnxHA7Ueqvga7PjkVeQFHd1a99sFnuQbmOkRp9P5vP0AAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="105"/>
+</svg>
