@@ -26,24 +26,27 @@
 
 
     .screens_white_circle_right {
+        position: relative;
+        @include media_white_blue_circles {
+            display: none;
+        }
         img {
             width: 400px;
             position: absolute;
             right: -220px;
-            transform: translateY(110px);
-
+            top: 110px;
 
 
         }
     }
 
     .screens_white_circle_left {
-
+        position: relative;
         img {
             width: 400px;
             position: absolute;
             left: -230px;
-            transform: translateY(254px);
+            top: 248px;
 
         }
 
@@ -52,6 +55,12 @@
 
     #screens_container_phone_image {
         @include mobile_style(900px);
+
+        @include media_images_phone {
+            img {
+                width: 600px;
+            }
+        }
     }
 
     #container_screens_description {

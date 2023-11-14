@@ -4,17 +4,19 @@
 * {
     margin: 0;
     body {
-
         overflow-x: hidden;
-       
-        font-family: 'Open Sans', sans-serif;
-        background-color: #F7FAFD;
+        font-family: 'Open Sans', sans-serif !important;
+        background-color: #F7FAFD !important;
         width: 100%;
         
 
         p, li{
             color: $color_text_descriptions;
             font-size: 18px;
+        }
+
+        h1, h2 {
+            font-weight: 700;
         }
 
 

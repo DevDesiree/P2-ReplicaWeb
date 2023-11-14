@@ -28,7 +28,7 @@
     h1 {
         text-align: center;
         font-size: 66px;
-       
+
     }
 
 
@@ -58,7 +58,7 @@
             color: $color_text_buttons;
             border: 2px solid #FF556E;
 
-            &:hover{
+            &:hover {
                 background-color: #FFFBFC;
                 color: #FF556E;
 
@@ -76,56 +76,73 @@
         }
     }
 
-    .banner_circle_white_right{
-        
-        
+    .banner_circle_white_right {
+        position: relative;
+
         img {
-            
-            
             width: 400px;
             height: 400px;
             position: absolute;
-            right: -220px; 
-            top: 200px;
-            
-            
+            right: -220px;
+            top: -225px;
+
+            @include media_white_blue_circles {
+                display: none;
+            }
+
         }
 
     }
 
-    .banner_circle_white_left{
-        
-        
+    .banner_circle_white_left {
+        position: relative;
+
         img {
-            
             width: 500px;
             height: 500px;
             position: absolute;
-            left: -300px; 
-            top: 250px;
-            
+            left: -300px;
+            top: -165px;
+
+            @include media_white_blue_circles {
+                display: none;
+            }
+
         }
-        
+
     }
 
-    .banner_circle_blue{
-        
+    .banner_circle_blue {
 
         img {
-            
             width: 100px;
             height: 100px;
             position: absolute;
-            left: 120px; 
+            left: 120px;
             top: 340px;
-            
+
+            @include media_white_blue_circles {
+                display: none;
+            }
+
         }
 
 
     }
 
     .banner_container_phone {
-        @include mobile_style (900px)
+        @include mobile_style (900px);
+        transition: 0.2s;
+
+        @include media_images_phone {
+            img {
+                width: 600px;
+            }
+        }
+
+        &:hover {
+            transform: scale(0.9);
+        }
 
     }
 
@@ -139,7 +156,6 @@
 
         .container_circle_cards {
 
-
             .circle_cards {
                 border-radius: 100px;
                 width: 120px;
@@ -149,6 +165,12 @@
                 justify-content: center;
                 align-items: center;
                 margin-bottom: 25px;
+                font-size: 23px;
+                transition: transform 0.5s;
+
+                &:hover {
+                    transform: rotate(360deg);
+                }
 
             }
 
@@ -201,9 +223,38 @@
 
     }
 
+}
 
 
+@media (min-width: 900px) {
+    .banner_circle_white_right {
+
+        .circle_white {
+            width: 100px;
+            height: 200px;
+
+        }
+    }
+}
 
 
+@media (min-width: 900px) {
+    .banner_circle_white_left {
 
+        .circle_white {
+            width: 100px;
+            height: 200px;
+
+        }
+    }
+}
+
+#banner_container_phone img {
+    @media (min-width: 1000px) {
+        width: 300px;
+    }
+}
+
+@mixin prueba {
+    @include prueba {}
 }

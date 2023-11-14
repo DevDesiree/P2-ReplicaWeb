@@ -6,8 +6,6 @@
     text-align: center;
     padding-bottom: 100px;
 
-
-
     #container_screens {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -47,8 +45,6 @@
 
             }
 
-
-
             span {
                 color: #FFB30F;
             }
@@ -63,7 +59,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             background-color: white;
-            height: 100px;
+
 
             div:last-child {
                 grid-column: span 4;
@@ -71,7 +67,6 @@
                 align-items: center;
                 justify-content: center;
             }
-
 
         }
     }
@@ -87,13 +82,22 @@
     #screen_stadistic_users {
         display: flex;
         flex-wrap: wrap;
-       
 
         .counter_stadistic {
 
             display: flex;
             flex-direction: column;
             margin: 50px;
+           
+
+            i{
+                font-size: 45px;
+                transition: transform 1s;
+
+                &:hover{
+                 transform: rotate(360deg);       
+                }
+            }
 
             &:nth-of-type(1) i {
                 color: #aa7eec;
@@ -115,14 +119,14 @@
                 color: #4FB9E8;
             }
 
-            span{
-                margin-top: 20px;
-                font-size: 40px;
+            span {
+                margin-top: 35px;
+                font-size: 55px;
                 font-weight: 700;
             }
 
-            p{
-                font-size: 13px
+            p {
+                font-size: 15px
             }
         }
 

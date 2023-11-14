@@ -30,4 +30,18 @@ $color_background_buttons: #FF556E;
     background-color: $background-color;
   }
 
+
+// Size images phone
+@mixin media_images_phone {
+  @media screen and (max-width: 900px){
+    @content;
+  }
+}
+
+
+@mixin media_white_blue_circles {
+  @media screen and (max-width: 1100px){
+    @content;
+  }
+}
   
