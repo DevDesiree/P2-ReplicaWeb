@@ -1,6 +1,8 @@
 # P2-ReplicaWeb
 Proyecto 2 Individual del Bootcamp FemCoders 😍
 
+- **Desplegada en Vercel** : [Replica Web](https://p2-replica-web.vercel.app/)
+
 
 ## Descripción
 
