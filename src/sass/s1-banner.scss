@@ -86,10 +86,6 @@
             right: -220px;
             top: -225px;
 
-            @include media_white_blue_circles {
-                display: none;
-            }
-
         }
 
     }
@@ -104,10 +100,6 @@
             left: -300px;
             top: -165px;
 
-            @include media_white_blue_circles {
-                display: none;
-            }
-
         }
 
     }
@@ -121,24 +113,14 @@
             left: 120px;
             top: 340px;
 
-            @include media_white_blue_circles {
-                display: none;
-            }
-
         }
 
 
     }
 
     .banner_container_phone {
-        @include mobile_style (900px);
+        @include mobile_style (800px);
         transition: 0.2s;
-
-        @include media_images_phone {
-            img {
-                width: 600px;
-            }
-        }
 
         &:hover {
             transform: scale(0.9);
@@ -223,38 +205,40 @@
 
     }
 
-}
-
-
-@media (min-width: 900px) {
-    .banner_circle_white_right {
-
-        .circle_white {
-            width: 100px;
-            height: 200px;
-
+    @include media_white_blue_circles{
+        .banner_circle_white_right, .banner_circle_white_left, .banner_circle_blue {
+    
+            img {
+    
+                @include media_white_blue_circles {
+                    display: none;
+                }
+    
+            }
+    
         }
     }
-}
 
+    @include media_images_phone_for_tablet {
+        .banner_container_phone{
+            
+            img {
+                max-width: 500px;
 
-@media (min-width: 900px) {
-    .banner_circle_white_left {
-
-        .circle_white {
-            width: 100px;
-            height: 200px;
-
+            }
         }
     }
-}
 
-#banner_container_phone img {
-    @media (min-width: 1000px) {
-        width: 300px;
+
+    @include media_images_phone_for_smartphone {
+        .banner_container_phone{
+            
+            img {
+                width: 350px;
+            }
+        }
     }
+
+
 }
 
-@mixin prueba {
-    @include prueba {}
-}

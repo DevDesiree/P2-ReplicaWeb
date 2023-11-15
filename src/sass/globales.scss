@@ -1,5 +1,9 @@
 @import 'variables';
+@import 'mixin';
 
+html{
+    width: 100%;
+}
 
 * {
     margin: 0;
@@ -19,9 +23,12 @@
             font-weight: 700;
         }
 
-
+    @include media_images_phone_for_smartphone {
+        padding: 0 10px 10px 10px;
         
-      }
+    }
+        
+    }
   }
   
 
