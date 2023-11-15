@@ -106,9 +106,14 @@
     }
 
     #description_2_container_img {
+        transition: transform 0.5s ease-in-out;
 
         img {
             width: 450px;
+
+            &:hover{
+                transform: scale(1.1);
+            }
         }
     }
 

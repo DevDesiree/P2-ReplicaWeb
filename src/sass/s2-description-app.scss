@@ -6,12 +6,17 @@
     padding-bottom: 100px;
 
     #description_container_img {
-
         display: flex;
         justify-content: space-around;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover{
+            transform: scaleX(-1);
+        }
 
         img {
             width: 500px;
+
         }
     }
 
@@ -100,10 +105,9 @@
         }
     
         #description_container_img {
-            
             img {
+                padding-bottom: 10px;
                 width: 350px;
-    
             }
         }    
     }

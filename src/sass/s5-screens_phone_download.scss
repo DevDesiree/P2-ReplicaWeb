@@ -47,9 +47,7 @@
 
     #screens_container_phone_image {
         @include mobile_style(800px);
-
         opacity: 1;
-        
         animation: fade-in 1.5s ease-in-out;
        
         @keyframes fade-in {
