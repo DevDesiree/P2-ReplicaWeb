@@ -31,7 +31,6 @@
 
     }
 
-
     .banner_description {
         color: $color_text_descriptions;
         text-align: center;
@@ -40,39 +39,54 @@
         max-width: 746px;
         margin-top: 15px;
         margin-bottom: 19px;
-    }
-
-    .banner_buttons {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
-
-
-        button {
-            @include buttons_style(13px, #FF556E);
-            padding: 12px 25px 12px 25px;
-            gap: 7px;
+    
+        .banner_buttons {
             display: flex;
-            align-items: center;
-            color: $color_text_buttons;
-            border: 2px solid #FF556E;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+    
+            a {
+                text-decoration: none;
+            }
+            
+            button {
+                @include buttons_style(13px, $color_background_buttons);
+                padding: 12px 25px 12px 25px;
+                gap: 7px;
+                display: flex;
+                align-items: center;
+                color: $color_text_buttons;
+                border: 2px solid #FF556E;
+                position: relative;
+                transition: background 0.5s;
 
-            &:hover {
-                background-color: #FFFBFC;
-                color: #FF556E;
-
+                
+    
                 i {
-                    color: #FF556E;
+                    font-size: 15px;
+                    color: $color_text_buttons;
+                }
+    
+                &:hover {
+                    background: linear-gradient(90deg, #fff, transparent, #fff);
+                    background-size: 200% 200%;
+                    animation: shine 1s;
+                    color: $color_background_buttons;
+                    background-color: $color_background_buttons;
+    
+                    i {
+                        color: $color_background_buttons;
+                    }
                 }
             }
-
-
-            i {
-                font-size: 15px;
-                color: $color_text_buttons;
-            }
-          
+        }
+    }
+    
+    
+    @keyframes shine {
+        to {
+            background-position: 200% 200%;
         }
     }
 
@@ -134,7 +148,6 @@
             }
         }
 
-
     }
 
     #banner_container_circle_cards {
@@ -185,7 +198,7 @@
                 background-color: #F8E5EA;
 
                 i {
-                    color: #FF556E;
+                    color: $color_background_buttons;
                 }
             }
 
@@ -239,7 +252,6 @@
             }
         }
     }
-
 
     @include media_images_phone_for_smartphone {
 

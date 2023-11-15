@@ -46,14 +46,24 @@
                 color: $color_text_buttons;
                 padding: 10px 27px 10px 27px;
                 border: 2px solid #FF556E;
-
+                position: relative;
+                transition: background 0.5s;
+    
                 &:hover {
-                    background-color: #FFFBFC;
-                    color: #FF556E;
+                    color: $color_background_buttons;
+                    background: linear-gradient(90deg, #fff, transparent, #fff);
+                    background-size: 200% 200%;
+                    animation: shine 1s;
+                    background-color: $color_background_buttons;
                 }
             }
         }
 
+    }
+    @keyframes shine {
+        to {
+            background-position: 200% 200%;
+        }
     }
 
 }

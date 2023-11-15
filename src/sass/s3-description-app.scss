@@ -1,15 +1,12 @@
 #description_2 {
-    padding-top: 100px;
+    padding: 100px 20px 100px 20px;
     background-color: #E8EFF6;
     display: flex;
     justify-content: center;
     gap: 150px;
-    padding-bottom: 100px;
-
-
 
     #container_button_and_description_2 {
-
+        max-width: 600px;
 
         #container_button_description_2 {
             display: flex;
@@ -35,12 +32,16 @@
                 border: none;
                 cursor: pointer;
 
+                &:hover {
+                    color: $color_background_buttons;
+                    background: linear-gradient(90deg, #fff, transparent, #fff);
+                    background-size: 200% 200%;
+                    animation: shine 1s;
+                }
 
             }
         }
     }
-
-
 
     #container_description_app_2 {
         color: #7E7E7E;
@@ -73,10 +74,15 @@
                 color: $color_text_buttons;
                 padding: 8px 27px 8px 27px;
                 border: 2px solid #FF556E;
-
+                position: relative;
+                transition: background 0.5s;
+                
                 &:hover {
-                    background-color: #FFFBFC;
-                    color: #FF556E;
+                    background: linear-gradient(90deg, #fff, transparent, #fff);
+                    background-size: 200% 200%;
+                    animation: shine 1s;
+                    color: #E8EFF6;
+                    background-color: $color_background_buttons;
                 }
             }
 
@@ -91,7 +97,11 @@
                 }
             }
         }
-
+        @keyframes shine {
+            to {
+                background-position: 200% 200%;
+            }
+        }
 
     }
 
@@ -102,15 +112,6 @@
         }
     }
 
-
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 @media screen and (max-width: 1120px) {

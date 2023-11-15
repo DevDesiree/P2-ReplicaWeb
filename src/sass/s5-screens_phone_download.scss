@@ -75,6 +75,10 @@
             margin-top: 25px;
             padding-bottom: 35px;
 
+            a {
+                text-decoration: none;
+            }
+
             button {
                 @include buttons_style(13px, $color_background_buttons);
                 padding: 12px 25px 12px 25px;
@@ -83,9 +87,14 @@
                 gap: 7px;
                 align-items: center;
                 border: 2px solid #FF556E;
+                position: relative;
+                transition: background 0.5s;
 
                 &:hover {
-                    background-color: #FFFBFC;
+                    background: linear-gradient(90deg, #fff, transparent, #fff);
+                    background-size: 200% 200%;
+                    animation: shine 1s;
+                    background-color: $color_background_buttons;
                     color: #FF556E;
 
                     i {
@@ -94,6 +103,12 @@
                 }
 
             }
+        }
+    }
+
+    @keyframes shine {
+        to {
+            background-position: 200% 200%;
         }
     }
 
