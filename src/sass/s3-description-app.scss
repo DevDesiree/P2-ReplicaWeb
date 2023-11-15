@@ -1,0 +1,177 @@
+#description_2 {
+    padding: 100px 20px 100px 20px;
+    background-color: #E8EFF6;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+
+    #container_button_and_description_2 {
+        max-width: 600px;
+
+        #container_button_description_2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 250px;
+            padding-bottom: 30px;
+
+
+            button:first-child {
+                background-color: #9A67E7;
+                color: $color_text_buttons;
+            }
+
+            button {
+                display: flex;
+                color: #7E7E7E;
+                padding: 5px 15px 5px 15px;
+                align-items: center;
+                gap: 7px;
+                font-size: 14px;
+                background-color: #FFFBFC;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: $color_background_buttons;
+                    background: linear-gradient(90deg, #fff, transparent, #fff);
+                    background-size: 200% 200%;
+                    animation: shine 1s;
+                }
+
+            }
+        }
+    }
+
+    #container_description_app_2 {
+        color: #7E7E7E;
+
+        p {
+            padding-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 0px;
+            list-style: none;
+
+
+            li {
+                padding-bottom: 10px;
+
+                i {
+                    margin-right: 5px;
+                    color: #24CC99;
+                }
+            }
+        }
+
+        #description_app_2_buttons {
+
+            margin-top: 12px;
+
+            button {
+                @include buttons_style(13px, #FF556E);
+                color: $color_text_buttons;
+                padding: 8px 27px 8px 27px;
+                border: 2px solid #FF556E;
+                position: relative;
+                transition: background 0.5s;
+                
+                &:hover {
+                    background: linear-gradient(90deg, #fff, transparent, #fff);
+                    background-size: 200% 200%;
+                    animation: shine 1s;
+                    color: #E8EFF6;
+                    background-color: $color_background_buttons;
+                }
+            }
+
+            button:nth-child(2) {
+                background-color: #E8EFF6;
+                border: 2px solid black;
+                color: black;
+
+                &:hover {
+                    background-color: black;
+                    color: #E8EFF6;
+                }
+            }
+        }
+        @keyframes shine {
+            to {
+                background-position: 200% 200%;
+            }
+        }
+
+    }
+
+    #description_2_container_img {
+        transition: transform 0.5s ease-in-out;
+
+        img {
+            width: 450px;
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1120px) {
+
+    #description_2{
+
+        display: flex;
+        flex-direction: column;
+
+        #container_button_and_description_2 {
+            
+            padding: 0 15px 0 15px;
+            margin: auto;
+
+            #container_button_description_2{
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+
+            }
+            
+            #description_app_2_buttons{
+                display: flex;
+                justify-content: center;
+            }
+           
+        }
+
+        #description_2_container_img{
+            margin: auto;
+            img{
+                width: 400px;
+            }
+        }
+    }
+
+}
+
+@include media_images_phone_for_smartphone {
+    #description_2{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        #description_2_container_img{
+            margin: auto;
+            img{
+
+                width: 300px;
+            }
+        }
+
+        #container_description_app_2{
+            padding: 10px;
+        }
+    }
+}

@@ -1,0 +1,270 @@
+#banner {
+    padding-top: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .banner_icons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 20px;
+
+        }
+
+        .green_diamond {
+            margin-left: 80px;
+        }
+
+
+        .yellow_circle {
+            margin-right: 7.5em;
+        }
+    }
+
+
+    h1 {
+        text-align: center;
+        font-size: 66px;
+
+    }
+
+    .banner_description {
+        color: $color_text_descriptions;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+        max-width: 746px;
+        margin-top: 15px;
+        margin-bottom: 19px;
+    
+        .banner_buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+    
+            a {
+                text-decoration: none;
+            }
+            
+            button {
+                @include buttons_style(13px, $color_background_buttons);
+                padding: 12px 25px 12px 25px;
+                gap: 7px;
+                display: flex;
+                align-items: center;
+                color: $color_text_buttons;
+                border: 2px solid #FF556E;
+                position: relative;
+                transition: background 0.5s;
+
+                
+    
+                i {
+                    font-size: 15px;
+                    color: $color_text_buttons;
+                }
+    
+                &:hover {
+                    background: linear-gradient(90deg, #fff, transparent, #fff);
+                    background-size: 200% 200%;
+                    animation: shine 1s;
+                    color: $color_background_buttons;
+                    background-color: $color_background_buttons;
+    
+                    i {
+                        color: $color_background_buttons;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    @keyframes shine {
+        to {
+            background-position: 200% 200%;
+        }
+    }
+
+    .banner_circle_white_right {
+        position: relative;
+
+        img {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            right: -220px;
+            top: -225px;
+
+        }
+
+    }
+
+    .banner_circle_white_left {
+        position: relative;
+
+        img {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: -300px;
+            top: -165px;
+
+        }
+
+    }
+
+    .banner_circle_blue {
+
+        img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 120px;
+            top: 340px;
+
+        }
+
+
+    }
+
+    .banner_container_phone {
+        @include mobile_style (800px);
+        opacity: 1;
+
+        animation: fade-in 1.5s ease-in-out;
+       
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    #banner_container_circle_cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 40px auto;
+        gap: 90px;
+
+        .container_circle_cards {
+
+            .circle_cards {
+                border-radius: 100px;
+                width: 120px;
+                height: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 25px;
+                font-size: 23px;
+                transition: transform 0.5s;
+
+                &:hover {
+                    transform: rotate(360deg);
+                }
+
+            }
+
+            #circle_goals {
+                background-color: #EBE7FA;
+
+                i {
+                    color: #aa7eec;
+                }
+            }
+
+            #circle_analysis {
+                background-color: #DAF4EF;
+
+                i {
+                    color: #19CA94;
+                }
+            }
+
+            #circle_settings {
+                background-color: #F8E5EA;
+
+                i {
+                    color: $color_background_buttons;
+                }
+            }
+
+            #circle_interaction {
+                background-color: #F8F1DE;
+
+                i {
+                    color: #FFB30F;
+                }
+            }
+
+            #things_done {
+                background-color: #E1F2FA;
+
+                i {
+                    color: #4FB9E8;
+                }
+            }
+
+            span {
+                text-align: center;
+                font-weight: 700;
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    @include media_white_blue_circles {
+
+        .banner_circle_white_right,
+        .banner_circle_white_left,
+        .banner_circle_blue {
+
+            img {
+
+                @include media_white_blue_circles {
+                    display: none;
+                }
+
+            }
+
+        }
+    }
+
+    @include media_images_phone_for_tablet {
+        .banner_container_phone {
+
+            img {
+                width: 500px;
+            }
+        }
+    }
+
+    @include media_images_phone_for_smartphone {
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .banner_container_phone {
+
+            img {
+                width: 350px;
+            }
+        }
+    }
+
+}

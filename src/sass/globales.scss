@@ -1,0 +1,35 @@
+@import 'variables';
+@import 'mixin';
+
+html{
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    body {
+        overflow-x: hidden;
+        font-family: 'Open Sans', sans-serif !important;
+        background-color: #F7FAFD !important;
+        width: 100%;
+        
+
+        p, li{
+            color: $color_text_descriptions;
+            font-size: 18px;
+        }
+
+        h1, h2 {
+            font-weight: 700;
+        }
+
+    @include media_images_phone_for_smartphone {
+        padding: 0 10px 10px 10px;
+        
+    }
+        
+    }
+  }
+  
+
+  

@@ -1,0 +1,145 @@
+#screens_phone_download {
+
+    .screens_green_diamond {
+        position: relative;
+        img {
+            width: 20px;
+            top: 99px;
+            position: absolute;
+            right: 180px;
+        }
+
+    }
+
+    .screens_yellow_circle {
+        position: relative;
+        img {
+            width: 40px;
+            top: 440px;
+            left: 150px;
+            position: absolute;
+        }
+    }
+
+
+    .screens_white_circle_right {
+        position: relative;
+
+        img {
+            width: 400px;
+            position: absolute;
+            right: -220px;
+            top: 110px;
+        }
+    }
+
+    .screens_white_circle_left {
+        position: relative;
+
+        img {
+            width: 400px;
+            position: absolute;
+            left: -230px;
+            top: 248px;
+        }
+
+    }
+
+    #screens_container_phone_image {
+        @include mobile_style(800px);
+        opacity: 1;
+        animation: fade-in 1.5s ease-in-out;
+       
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+    }
+
+    #container_screens_description {
+        max-width: 840px;
+        margin: 25px auto;
+
+        #container_screens_buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+            padding-bottom: 35px;
+
+            a {
+                text-decoration: none;
+            }
+
+            button {
+                @include buttons_style(13px, $color_background_buttons);
+                padding: 12px 25px 12px 25px;
+                color: $color_text_buttons;
+                display: flex;
+                gap: 7px;
+                align-items: center;
+                border: 2px solid #FF556E;
+                position: relative;
+                transition: background 0.5s;
+
+                &:hover {
+                    background: linear-gradient(90deg, #fff, transparent, #fff);
+                    background-size: 200% 200%;
+                    animation: shine 1s;
+                    background-color: $color_background_buttons;
+                    color: #FF556E;
+
+                    i {
+                        color: #FF556E;
+                    }
+                }
+
+            }
+        }
+    }
+
+    @keyframes shine {
+        to {
+            background-position: 200% 200%;
+        }
+    }
+
+    @include media_images_phone_for_tablet {
+
+        #screens_container_phone_image {
+
+            img {
+                width: 500px;
+            }
+        }
+    }
+
+
+    @include media_images_phone_for_smartphone {
+       
+        #screens_container_phone_image {
+
+            img {
+                width: 350px;
+            }
+        }
+    }
+
+    @include media_white_blue_circles {
+
+        .screens_white_circle_left,
+        .screens_white_circle_right,
+        .screens_yellow_circle,
+        .screens_green_diamond {
+
+            display: none;
+        }
+
+    }
+}
