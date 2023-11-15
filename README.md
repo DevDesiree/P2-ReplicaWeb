@@ -10,11 +10,12 @@ El proyecto consiste en replicar un sitio web basado en el mockup proporcionado 
 ## Mockups
 
 Se adjuntan los mockups facilitados por el cliente:
-
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
 <img src="./public/assets/images readme/parte-1.png" alt="Imagen Mockup 1" width="300" height="370">
 <img src="./public/assets/images readme/parte-2.png" alt="Imagen Mockup 2" width="300" height="370">
 <img src="./public/assets/images readme/parte-3.png" alt="Imagen Mockup 3" width="300" height="370">
 <img src="./public/assets/images readme/parte-4.png" alt="Imagen Mockup 4" width="300" height="370">
+</div>
 
 ## Tecnologías Utilizadas
 
