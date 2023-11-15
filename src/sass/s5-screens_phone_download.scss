@@ -1,10 +1,10 @@
 #screens_phone_download {
 
     .screens_green_diamond {
-
+        position: relative;
         img {
             width: 20px;
-            transform: translateY(99px);
+            top: 99px;
             position: absolute;
             right: 180px;
         }
@@ -12,11 +12,10 @@
     }
 
     .screens_yellow_circle {
-
-
+        position: relative;
         img {
             width: 40px;
-            transform: translateY(440px);
+            top: 440px;
             left: 150px;
             position: absolute;
         }
@@ -48,6 +47,20 @@
 
     #screens_container_phone_image {
         @include mobile_style(800px);
+
+        opacity: 1;
+        
+        animation: fade-in 1.5s ease-in-out;
+       
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
 
     }
 
@@ -83,7 +96,6 @@
             }
         }
     }
-
 
     @include media_images_phone_for_tablet {
 

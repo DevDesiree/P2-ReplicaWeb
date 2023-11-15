@@ -24,7 +24,6 @@ html {
   }
 }
 
-/* Header */
 header {
   background-color: #F7FAFD;
   width: 100%;
@@ -37,6 +36,10 @@ header nav {
   background-color: #F7FAFD;
   font-family: "Open Sans", sans-serif;
   color: #FF556E;
+}
+header nav .active {
+  font-weight: bold;
+  color: #FF556E !important;
 }
 header nav .navbar-collapse {
   text-align: center;
@@ -82,11 +85,6 @@ header nav .dropdown-menu .dropdown-item:hover {
   color: #FF556E;
 }
 
-@media (min-width: 768px) {
-  nav {
-    position: fixed;
-  }
-}
 #banner {
   padding-top: 100px;
   justify-content: center;
@@ -183,13 +181,19 @@ header nav .dropdown-menu .dropdown-item:hover {
   display: flex;
   justify-content: center;
   margin-top: 70px;
-  transition: 0.2s;
+  opacity: 1;
+  animation: fade-in 1.5s ease-in-out;
 }
 #banner .banner_container_phone img {
   width: 800px;
 }
-#banner .banner_container_phone:hover {
-  transform: scale(0.9);
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #banner #banner_container_circle_cards {
   display: flex;
@@ -250,16 +254,21 @@ header nav .dropdown-menu .dropdown-item:hover {
   font-size: 14px;
 }
 @media screen and (max-width: 1240px) and (max-width: 1240px) {
-  #banner .banner_circle_white_right img, #banner .banner_circle_white_left img, #banner .banner_circle_blue img {
+  #banner .banner_circle_white_right img,
+  #banner .banner_circle_white_left img,
+  #banner .banner_circle_blue img {
     display: none;
   }
 }
 @media screen and (max-width: 800px) {
   #banner .banner_container_phone img {
-    max-width: 500px;
+    width: 500px;
   }
 }
 @media screen and (max-width: 450px) {
+  #banner h1 {
+    font-size: 50px;
+  }
   #banner .banner_container_phone img {
     width: 350px;
   }
@@ -278,11 +287,6 @@ header nav .dropdown-menu .dropdown-item:hover {
 }
 #description #description_container_img img {
   width: 500px;
-}
-@media screen and (max-width: 450px) {
-  #description #description_container_img img {
-    width: 400px;
-  }
 }
 #description #container_description_app_1 {
   max-width: 520px;
@@ -320,6 +324,7 @@ header nav .dropdown-menu .dropdown-item:hover {
   background-color: #FFFBFC;
   color: #FF556E;
 }
+
 @media screen and (max-width: 1060px) {
   #description {
     display: flex;
@@ -351,7 +356,6 @@ header nav .dropdown-menu .dropdown-item:hover {
     width: 350px;
   }
 }
-
 #description_2 {
   padding-top: 100px;
   background-color: #E8EFF6;
@@ -430,12 +434,14 @@ header nav .dropdown-menu .dropdown-item:hover {
 #description_2 #description_2_container_img img {
   width: 450px;
 }
+
 @media screen and (max-width: 1120px) {
   #description_2 {
     display: flex;
     flex-direction: column;
   }
   #description_2 #container_button_and_description_2 {
+    padding: 0 15px 0 15px;
     margin: auto;
   }
   #description_2 #container_button_and_description_2 #container_button_description_2 {
@@ -470,7 +476,6 @@ header nav .dropdown-menu .dropdown-item:hover {
     padding: 10px;
   }
 }
-
 #screens {
   padding-top: 100px;
   text-align: center;
@@ -578,15 +583,21 @@ header nav .dropdown-menu .dropdown-item:hover {
     flex-direction: column;
   }
 }
+#screens_phone_download .screens_green_diamond {
+  position: relative;
+}
 #screens_phone_download .screens_green_diamond img {
   width: 20px;
-  transform: translateY(99px);
+  top: 99px;
   position: absolute;
   right: 180px;
 }
+#screens_phone_download .screens_yellow_circle {
+  position: relative;
+}
 #screens_phone_download .screens_yellow_circle img {
   width: 40px;
-  transform: translateY(440px);
+  top: 440px;
   left: 150px;
   position: absolute;
 }
@@ -612,9 +623,19 @@ header nav .dropdown-menu .dropdown-item:hover {
   display: flex;
   justify-content: center;
   margin-top: 70px;
+  opacity: 1;
+  animation: fade-in 1.5s ease-in-out;
 }
 #screens_phone_download #screens_container_phone_image img {
   width: 800px;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 #screens_phone_download #container_screens_description {
   max-width: 840px;
@@ -734,14 +755,18 @@ footer #footer_copyright span {
   #footer_container_groups div {
     margin-bottom: 20px;
   }
-  #footer_container_groups p, #footer_container_groups ul, #footer_container_groups li, #footer_container_groups a, #footer_container_groups i {
-    font-size: 20px;
+  #footer_container_groups p,
+  #footer_container_groups ul,
+  #footer_container_groups li,
+  #footer_container_groups a,
+  #footer_container_groups i {
+    font-size: 15px !important;
   }
   #footer_copyright {
     text-align: center;
   }
   #footer_copyright span {
-    font-size: 16px !important;
+    font-size: 13px !important;
   }
 }
 

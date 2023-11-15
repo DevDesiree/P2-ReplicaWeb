@@ -72,7 +72,7 @@
                 font-size: 15px;
                 color: $color_text_buttons;
             }
-
+          
         }
     }
 
@@ -120,11 +120,20 @@
 
     .banner_container_phone {
         @include mobile_style (800px);
-        transition: 0.2s;
+        opacity: 1;
 
-        &:hover {
-            transform: scale(0.9);
+        animation: fade-in 1.5s ease-in-out;
+       
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
+
 
     }
 
@@ -205,40 +214,45 @@
 
     }
 
-    @include media_white_blue_circles{
-        .banner_circle_white_right, .banner_circle_white_left, .banner_circle_blue {
-    
+    @include media_white_blue_circles {
+
+        .banner_circle_white_right,
+        .banner_circle_white_left,
+        .banner_circle_blue {
+
             img {
-    
+
                 @include media_white_blue_circles {
                     display: none;
                 }
-    
+
             }
-    
+
         }
     }
 
     @include media_images_phone_for_tablet {
-        .banner_container_phone{
-            
-            img {
-                max-width: 500px;
+        .banner_container_phone {
 
+            img {
+                width: 500px;
             }
         }
     }
 
 
     @include media_images_phone_for_smartphone {
-        .banner_container_phone{
-            
+
+        h1 {
+            font-size: 50px;
+        }
+
+        .banner_container_phone {
+
             img {
                 width: 350px;
             }
         }
     }
 
-
 }
-

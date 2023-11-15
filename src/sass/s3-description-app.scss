@@ -103,13 +103,26 @@
     }
 
 
-    @media screen and (max-width: 1120px) {
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+@media screen and (max-width: 1120px) {
+
+    #description_2{
 
         display: flex;
         flex-direction: column;
 
         #container_button_and_description_2 {
-
+            
+            padding: 0 15px 0 15px;
             margin: auto;
 
             #container_button_description_2{
@@ -134,7 +147,11 @@
         }
     }
 
-    @include media_images_phone_for_smartphone {
+}
+
+@include media_images_phone_for_smartphone {
+    #description_2{
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -150,12 +167,5 @@
         #container_description_app_2{
             padding: 10px;
         }
-
-
     }
-
-
-
-
-
 }
